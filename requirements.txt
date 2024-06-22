@@ -1,0 +1,9 @@
+yfinance
+pandas
+numpy
+scikit-learn
+matplotlib
+streamlit
+ta
+nbconvert
+nbformat
