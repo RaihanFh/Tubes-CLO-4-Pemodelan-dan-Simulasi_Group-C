@@ -35,7 +35,7 @@ def load_data(start, end):
 data = load_data(start_date, end_date)
 
 st.subheader('Data Saham AGRO.JK')
-st.write(data.head())
+st.write(data.head(20))
 
 features = ['SMA', 'EMA', 'RSI']
 scaler = MinMaxScaler()
