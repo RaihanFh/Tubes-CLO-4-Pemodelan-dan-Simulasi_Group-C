@@ -16,9 +16,13 @@ st.write("* Naufal Alfarisi - 1301213452")
 st.write("* Mufidah Alfiah - 1301184180")
 st.write("* Raihan Fadhilah Hafiizh - 1301213113")
 
+# Input untuk memilih tanggal mulai dan tanggal akhir
+start_date = st.date_input("Pilih tanggal mulai", value=pd.to_datetime("2021-01-01"))
+end_date = st.date_input("Pilih tanggal akhir", value=pd.to_datetime("2023-12-31"))
+
 @st.cache
-def load_data():
-    data = yf.download("AGRO.JK", start="2021-01-01", end="2023-12-31")
+def load_data(start, end):
+    data = yf.download("AGRO.JK", start=start, end=end)
     data = data.interpolate(method='linear')
     data['Log_Return'] = np.log(data['Close'] / data['Close'].shift(1))
     data.dropna(inplace=True)
@@ -28,7 +32,7 @@ def load_data():
     data.dropna(inplace=True)
     return data
 
-data = load_data()
+data = load_data(start_date, end_date)
 
 st.subheader('Data Saham AGRO.JK')
 st.write(data.head())
