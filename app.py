@@ -9,7 +9,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import ta
 import matplotlib.pyplot as plt
 
-st.title("Prediksi Harga Saham dengan Kombinasi Machine Learning dan Gerakan Brown Geometrik (GBM)")
+st.title("Prediksi Harga Saham AGRO.JK (Bank Rakyat Indonesia) dengan Kombinasi Machine Learning dan Gerakan Brown Geometrik (GBM)")
 st.write("Anggota Kelompok:")
 st.write("* Adhie Haqqi Ramadhani S. -  1301213312")
 st.write("* Naufal Alfarisi - 1301213452")
